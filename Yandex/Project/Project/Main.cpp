@@ -4,11 +4,11 @@ using namespace std;
 int Fibonachy(int n);
 int NFibonachy(int f);
 int newSeries();
+int kremer();
+int kremer2();
 
 int main() {
-	int n;
-	//cin >> n;
-	cout << newSeries();
+	kremer2();
 
 	cin.get();
 	cin.get();
@@ -48,7 +48,42 @@ int newSeries() {
 			series = 1;
 		}
 		prevNumber = number;
-	} while (number!=0);
-	
+	} while (number != 0);
+
 	return maxSeries;
+}
+
+int kremer() {
+	double a, b, c, d, e, f;
+	double dd, dx, dy;
+	cin >> a >> b >> c >> d >> e >> f;
+	dd = a * d - b * c;
+	dx = e * d - b * f;
+	dy = a * f - e * c;
+	cout << dx / dd << " " << dy / dd;
+	return 0;
+}
+
+int kremer2() {
+	double a, b, c, d, e, f;
+	double dd, dx, dy;
+	cin >> a >> b >> c >> d >> e >> f;
+	dd = a * d - b * c;
+	dx = e * d - b * f;
+	dy = a * f - e * c;
+	if (dd != 0) {
+		cout << 2 << " " << dx / dd << " " << dy / dd;
+	}
+	else
+		if (dx == 0 && dy == 0) {
+			if (a == 0 && b == 0 && c == 0 && d == 0)
+				if (e != 0 || f != 0)
+					cout << 0;
+				else
+					cout << 5;
+			else
+				if(a==0&&c==0)
+					if(b!=0)
+
+		}
 }
