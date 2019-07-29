@@ -82,8 +82,25 @@ int kremer2() {
 				else
 					cout << 5;
 			else
-				if(a==0&&c==0)
-					if(b!=0)
-
+				if (a == 0 && c == 0)
+					if (b != 0)
+						cout << 4 << " " << e / b;
+					else
+						cout << 4 << " " << f / d;
+				else
+					if (b == 0 && d == 0)
+						if (a != 0)
+							cout << 3 << " " << e / a;
+						else
+							cout << 3 << " " << f / c;
+					else
+						if (b != 0)
+							cout << 1 << " " << e / b << " " << -a / b;
+						else
+							cout << 1 << " " << f / d << " " << -c / d;
 		}
+		else
+			cout << 0;
+	return 0;
 }
+
