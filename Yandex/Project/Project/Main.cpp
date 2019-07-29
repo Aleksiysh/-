@@ -15,9 +15,6 @@ int main() {
 	return 0;
 }
 
-
-
-
 int Fibonachy(int n) {
 	int a = 0, b = 1, i = 0;
 	while (i < n) {
