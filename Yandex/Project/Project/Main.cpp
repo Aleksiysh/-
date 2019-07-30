@@ -95,9 +95,9 @@ int kremer2() {
 							cout << 3 << " " << f / c;
 					else
 						if (b != 0)
-							cout << 1 << " " << -a / b <<" " << e / b;
+							cout << 1 << " " << -a / b << " " << e / b;
 						else
-							cout << 1 << " " << f / d << " " << -c / d;
+							cout << 1 << " " << -c / d << " " << f / d;
 		}
 		else
 			cout << 0;
