@@ -116,9 +116,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="RealNumber.cpp" />
     <ClCompile Include="Vector_for.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="RealNumber.h" />
     <ClInclude Include="Vector_for.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
