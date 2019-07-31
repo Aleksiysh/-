@@ -5,3 +5,7 @@ void step5();
 void step6();
 void step7();
 void step8();
+int step9();
+int step10();
+int step11();
+int step12();
