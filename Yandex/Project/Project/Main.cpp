@@ -1,16 +1,14 @@
 #include <iostream>
 #include "Vector_for.h"
 #include "RealNumber.h"
-
+#include "Array2D.h"
 using namespace std;
 
-
-
 int main() {
-	//kremer2();
-	step16();
+	
+	step8_9();
 
-	//cout << "\nPress Enter";
+	cout << endl;
 	system("pause");
 	return 0;
 }

@@ -1,0 +1,144 @@
+#include <iostream>
+#include <vector>
+#include "Array2D.h"
+using namespace std;
+
+int step8_3()
+{
+	int n, m, n_max = 0, m_max = 0;
+	cin >> n >> m;
+	vector<vector<int>> a(n, vector<int>(m));
+
+	//int a[100][100];
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			cin >> a[i][j];
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			if (a[i][j] > a[n_max][m_max])
+			{
+				n_max = i;
+				m_max = j;
+			}
+	cout << n_max << " " << m_max;
+
+	return 0;
+}
+
+int step8_4() {
+	int n;
+	cin >> n;
+	vector<vector<char>> a(n, vector<char>(n));
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++) {
+			if (i == n / 2 || j == n / 2 || i == j || i == n - j - 1)
+				a[i][j] = '*';
+			else
+				a[i][j] = '.';
+		}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++)
+			cout << a[i][j] << " ";
+		cout << endl;
+	}
+	return 0;
+}
+
+int step8_5()
+{
+	int n;
+	cin >> n;
+	vector<vector<int>> a(n, vector<int>(n));
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++)
+			a[i][j] = abs(i - j);
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++)
+			cout << a[i][j] << " ";
+		cout << endl;
+	}
+	return 0;
+}
+
+int step8_6() {
+	int n, m, i, j;
+	int tmp;
+	cin >> n >> m;
+	vector<vector<int>> a(n, vector<int>(m));
+	for (int k = 0; k < n; k++)
+		for (int l = 0; l < m; l++)
+			cin >> a[k][l];
+	cin >> i >> j;
+	for (int k = 0; k < n; k++) {
+		tmp = a[k][i];
+		a[k][i] = a[k][j];
+		a[k][j] = tmp;
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++)
+			cout << a[i][j] << " ";
+		cout << endl;
+	}
+	return 0;
+}
+
+int step8_7() {
+	int n;
+	cin >> n;
+	vector<vector<int>> a(n, vector<int>(n));
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++)
+			cin >> a[i][j];
+	bool flag = true;
+	for (int i = 0; i < n; i++)
+		for (int j = i; j < n; j++)
+			if (a[i][j] != a[j][i])
+				flag = false;
+	if (flag)
+		cout << "YES";
+	else
+		cout << "NO";
+
+	return 0;
+}
+
+int step8_8() {
+	int n, k;
+	cin >> n;
+	vector<vector<int>> a(n, vector<int>(n));
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++)
+			cin >> a[i][j];
+
+	cin >> k;
+	if (k > 0)
+		for (int i = k; i < n; i++)
+			cout << a[i][i - k] << " ";
+	else if (k == 0)
+		for (int i = 0; i < n; i++)
+			cout << a[i][i] << " ";
+	else
+		for (int i = 0; i < n + k; i++)
+			cout << a[i][i - k] << " ";
+
+	return 0;
+}
+
+int step8_9() {
+	int n, m;
+	cin >> n >> m;
+	vector<vector<int>> a(n, vector<int>(m));
+	//vector<vector<int>> b(m, vector<int>(n));
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+		{
+			cin >> a[i][j];
+			//b[j][i] = a[i][j];
+		}
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++)
+			cout << a[j][i] << " ";
+		cout << endl;
+	}
+	return 0;
+}
