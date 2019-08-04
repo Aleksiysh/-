@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include "Vector_for.h"
+//#include <math.h>
 //#include "Vector_for.h"
 using namespace std;
 
@@ -109,7 +111,7 @@ int step9() {
 	for (int i = 0; i < n; i++)
 	{
 		cin >> tmp;
-		if (tmp%2 != 0)
+		if (tmp % 2 != 0)
 			a.push_back(tmp);
 	}
 	bool flag = false;
@@ -119,28 +121,28 @@ int step9() {
 		return 0;
 	}
 	min_odd_element = a[0];
-	for (int i = 1; i < a.size(); i++) {
+	for (size_t i = 1; i < a.size(); i++) {
 		if (a[i] < min_odd_element) {
 			min_odd_element = a[i];
 		}
 	}
 	cout << min_odd_element;
-	return 0;	
+	return 0;
 }
 
 int step10() {
-	int n, number=1;
+	int n, number = 1;
 	cin >> n;
 	vector<int> a(n);
-	int tmp;
+	//	int tmp;
 
 	for (int i = 0; i < n; i++)
 	{
-		cin>>a[i];
+		cin >> a[i];
 	}
 
 	for (int i = 1; i < n; i++) {
-		if (a[i] !=a[i-1]) {
+		if (a[i] != a[i - 1]) {
 			number++;
 		}
 	}
@@ -159,14 +161,14 @@ int step11() {
 		cin >> a[i];
 	}
 
-	for (int i = 1; i < n; i+=2) {
+	for (int i = 1; i < n; i += 2) {
 		tmp = a[i];
 		a[i] = a[i - 1];
 		a[i - 1] = tmp;
 	}
 
 	for (int i = 0; i < n; i++)
-		cout << a[i] << " ";	
+		cout << a[i] << " ";
 	return 0;
 }
 
@@ -188,5 +190,70 @@ int step12() {
 
 	for (int i = 0; i < n; i++)
 		cout << a[i] << " ";
+	return 0;
+}
+
+int step13() {
+	int n, number = 0;
+	cin >> n;
+	vector<int> a(n);
+	//	int tmp;
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i];
+	}
+
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (a[i] == a[j]) number++;
+		}
+	}
+	cout << number << endl;
+	return 0;
+}
+
+int step14() {
+	int n, number = 0;
+	bool flag = false;
+	cin >> n;
+	vector<int> a(n);
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i];
+	}
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++)
+			if (a[i] == a[j]) number++;
+		if (number == 1)
+			cout << a[i] << " ";
+		number = 0;
+	}
+	return 0;
+}
+
+int step15()
+{
+	bool flag = false;
+	vector<int> x(8), y(8);
+	for (int i = 0; i < 8; i++)
+		cin >> x[i] >> y[i];
+	for (int i = 0; i < 7; i++)
+		for (int j = i + 1; j < 8; j++)
+			if (x[i] == x[j] || 
+				y[i] == y[j] || 
+				abs(x[i] - x[j]) == abs(y[i] - y[j]))
+					flag = true;
+	if (flag)
+		cout << "YES";
+	else
+		cout<<"NO";
+	return 0;
+}
+
+int step16()
+{
 	return 0;
 }
