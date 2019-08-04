@@ -242,18 +242,35 @@ int step15()
 		cin >> x[i] >> y[i];
 	for (int i = 0; i < 7; i++)
 		for (int j = i + 1; j < 8; j++)
-			if (x[i] == x[j] || 
-				y[i] == y[j] || 
+			if (x[i] == x[j] ||
+				y[i] == y[j] ||
 				abs(x[i] - x[j]) == abs(y[i] - y[j]))
-					flag = true;
+				flag = true;
 	if (flag)
 		cout << "YES";
 	else
-		cout<<"NO";
+		cout << "NO";
 	return 0;
 }
 
 int step16()
 {
+	int n, k, l, r;
+	cin >> n >> k;
+	vector<char> a(n);
+	for (int i = 0; i < n; i++)
+		a[i] = 'I';
+	for (int i = 0; i < k; i++)
+	{
+		cin >> l >> r;
+		for (int j = l-1; j < r; j++)
+			a[j] = '.';
+	}
+	for (int i = 0; i < n; i++)
+		cout << a[i];
+		/*if (a[i] == 1)
+			cout << "I";
+		else
+			cout << ".";*/
 	return 0;
 }

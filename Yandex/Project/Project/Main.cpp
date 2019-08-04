@@ -8,12 +8,10 @@ using namespace std;
 
 int main() {
 	//kremer2();
-	step15();
+	step16();
 
-	cout << "\nPress Enter";
-	//cin.get();
-	cin.get();
-	cin.get();
+	//cout << "\nPress Enter";
+	system("pause");
 	return 0;
 }
 
