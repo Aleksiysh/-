@@ -128,17 +128,45 @@ int step8_9() {
 	int n, m;
 	cin >> n >> m;
 	vector<vector<int>> a(n, vector<int>(m));
-	//vector<vector<int>> b(m, vector<int>(n));
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < m; j++)
 		{
 			cin >> a[i][j];
-			//b[j][i] = a[i][j];
 		}
 	for (int i = 0; i < m; i++) {
 		for (int j = 0; j < n; j++)
 			cout << a[j][i] << " ";
 		cout << endl;
 	}
+	return 0;
+}
+
+int step8_10() {
+	int n, m, k, row = 0, count = 0;
+	cin >> n >> m;
+	vector<vector<int>> a(n, vector<int>(m));
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			cin >> a[i][j];
+	cin >> k;
+	for (int i = 0; i < n; i++) {
+		if (row != 0)
+			break;
+		for (int j = 0; j < m; j++) {
+			if (a[i][j] == 0) {
+				count++;
+				if (count >= k) {
+					row = i + 1;
+					break;
+				}
+			}
+			else {				
+				count = 0;
+			}
+		}
+		count = 0;
+	}
+	cout << row;
+
 	return 0;
 }
