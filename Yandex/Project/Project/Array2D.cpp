@@ -160,7 +160,7 @@ int step8_10() {
 					break;
 				}
 			}
-			else {				
+			else {
 				count = 0;
 			}
 		}
@@ -168,5 +168,51 @@ int step8_10() {
 	}
 	cout << row;
 
+	return 0;
+}
+
+int step8_11() {
+	int n, m;
+	//cin >> n >> m;
+	n = 3; m = 4;
+	vector<vector<int>> a{
+		{11,12,13,14},
+		{21,22,23,24},
+		{31,32,33,34}
+	};
+	/*for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+		{
+			cin >> a[i][j];
+		}*/
+	for (int i = 0; i < m; i++) {
+		for (int j = n - 1; j >= 0; j--)
+			cout << a[j][i] << " ";
+		cout << endl;
+	}
+	return 0;
+}
+
+//printf();
+int step8_12() {
+	int n, m, j = 0, inc = 1, num = 1;
+	cin >> n >> m;
+	vector<vector<int>> a(n, vector<int>(m));
+	for (int i = 0; i < n; i++)
+		if (i % 2 == 0)
+			for (int j = 0; j < m; j++) {
+				a[i][j] = num;
+				num++;
+			}
+		else
+			for (int j = m - 1; j >= 0; j--) {
+				a[i][j] = num;
+				num++;
+			}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++)
+			printf("%4d", a[i][j]);
+		cout << endl;
+	}
 	return 0;
 }

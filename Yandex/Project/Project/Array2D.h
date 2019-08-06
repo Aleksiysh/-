@@ -7,3 +7,5 @@ int step8_7();
 int step8_8();
 int step8_9();
 int step8_10();
+int step8_11();
+int step8_12();
