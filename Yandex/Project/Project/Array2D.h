@@ -9,3 +9,6 @@ int step8_9();
 int step8_10();
 int step8_11();
 int step8_12();
+int step8_13();
+int step8_14();
+int step8_15();

@@ -216,3 +216,100 @@ int step8_12() {
 	}
 	return 0;
 }
+
+int step8_13() {
+	int n, m;
+	int count = 1;
+	cin >> n >> m;
+	vector<vector<int>> a(n, vector<int>(m));
+	for (int i = 0; i < n + m - 1; i++)
+	{
+		for (int k = 0; k < n; k++)
+			for (int l = 0; l < m; l++)
+				if (k + l == i) {
+					a[k][l] = count;
+					count++;
+				}
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++)
+			printf("%4d", a[i][j]);
+		cout << endl;
+	}
+	return 0;
+}
+
+int step8_14() {
+	int n, m;
+	int count = 1;
+	cin >> n >> m;
+	vector<vector<int>> a(n, vector<int>(m));
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			if ((i + j) % 2 == 0) {
+				a[i][j] = count;
+				count++;
+			}
+			else
+				a[i][j] = 0;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++)
+			printf("%4d", a[i][j]);
+		cout << endl;
+	}
+	return 0;
+}
+
+int step8_15() {
+	int n, m;
+	int i = 0, j = -1;
+	int count = 1;
+	int course = 0;
+	cin >> n >> m;
+	vector<vector<int>> a(n, vector<int>(m));
+	while (count<=m*n) {
+		if (course == 0) {			//вправо
+			if (j < m - 1 && a[i][j + 1] == 0) {
+				j++;
+				a[i][j] = count;
+				count++;
+			}
+			else
+				course = (course + 1) % 4;
+		}
+		else if (course == 1) {		//вниз
+			if (i < n - 1 && a[i+1][j] == 0) {
+				i++;
+				a[i][j] = count;
+				count++;
+			}
+			else
+				course = (course + 1) % 4;
+		}
+		else if (course == 2) { //влево
+			if (j > 0 && a[i][j -1] == 0) {
+				j--;
+				a[i][j] = count;
+				count++;
+			}
+			else
+				course = (course + 1) % 4;
+		}
+		else {				//вверх
+			if (i > 0 && a[i - 1][j] == 0) {
+				i--;
+				a[i][j] = count;
+				count++;
+			}
+			else
+				course = (course + 1) % 4;
+		}
+}
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++)
+			printf("%4d", a[i][j]);
+		cout << endl;
+	}
+	return 0;
+}

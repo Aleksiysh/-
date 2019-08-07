@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 	
-	step8_12();
+	step8_15();
 
 	cout << endl;
 	system("pause");
