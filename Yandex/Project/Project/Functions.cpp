@@ -97,15 +97,15 @@ int step9_9()
 #pragma endregion
 
 #pragma region Step9_10
-int MinDivisor(int n)
+int MinDivisor(int n, int d = 2)
 {
-	int minDivision = n;
-	for (int i = 2; i <= sqrt(n); i++)
-		if (n % 2 == 0) {
-			minDivision = i;
-			break;
-		}
-	return minDivision;
+	if (d <= sqrt(n)) 
+		if (n%d == 0)
+			return d;
+		else
+			MinDivisor(n, d + 1);	
+	else
+		return n;	
 }
 int step9_10()
 {

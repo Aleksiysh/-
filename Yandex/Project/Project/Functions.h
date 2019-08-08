@@ -20,4 +20,4 @@ int step9_9();
 double power(double a, int n);
 
 int step9_10();
-int MinDivisor(int n);
+int MinDivisor(int n,int d);
