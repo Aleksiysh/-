@@ -136,3 +136,49 @@ int step9_11()
 }
 #pragma endregion
 
+double fastPower(double a, int n)
+{
+	if (n == 0)
+		return 1;
+	if (n % 2 == 0)
+		return fastPower(a*a, n / 2);
+	else
+		return a * fastPower(a, n - 1);
+}
+int step9_12()
+{
+	double a;
+	int n;
+	cin >> a >> n;
+	cout << fastPower(a, n);
+	return 0;
+}
+
+double recSumm(double sum = 0)
+{
+	double number;
+	cin >> number;
+	if (number == 0)
+		return sum;
+	sum += number;
+	return recSumm(sum);
+}
+int step9_13()
+{
+	cout << recSumm();
+	return 0;
+}
+
+int recFibonacci(int n)
+{
+	if (n < 3)
+		return 1;
+	return recFibonacci(n-1)+recFibonacci(n-2);
+}
+int step9_14()
+{
+	int n;
+	cin >> n;
+	cout << recFibonacci(n);
+	return 0;
+}

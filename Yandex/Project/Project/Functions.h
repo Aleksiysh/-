@@ -24,3 +24,12 @@ int MinDivisor(int n,int d);
 
 int step9_11();
 bool IsPrime(int n, int d);
+
+int step9_12();
+double fastPower(double a, int n);
+
+int step9_13();
+double recSumm(double sum, double number);
+
+int step9_14();
+int recFibonacci(int n);
