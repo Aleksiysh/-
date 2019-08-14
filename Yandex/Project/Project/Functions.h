@@ -21,3 +21,6 @@ double power(double a, int n);
 
 int step9_10();
 int MinDivisor(int n,int d);
+
+int step9_11();
+bool IsPrime(int n, int d);

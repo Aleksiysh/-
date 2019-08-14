@@ -99,13 +99,13 @@ int step9_9()
 #pragma region Step9_10
 int MinDivisor(int n, int d = 2)
 {
-	if (d <= sqrt(n)) 
+	if (d <= sqrt(n))
 		if (n%d == 0)
 			return d;
 		else
-			MinDivisor(n, d + 1);	
+			MinDivisor(n, d + 1);
 	else
-		return n;	
+		return n;
 }
 int step9_10()
 {
@@ -115,3 +115,24 @@ int step9_10()
 	return 0;
 }
 #pragma endregion
+
+#pragma region Step9_11
+bool IsPrime(int n, int d = 2)
+{
+	if (d <= sqrt(n) && n > 3)
+		if (n%d == 0)
+			return false;
+		else
+			IsPrime(n, d + 1);
+	else
+		return true;
+}
+int step9_11()
+{
+	int n;
+	cin >> n;
+	cout << (IsPrime(n) ? "YES" : "NO");
+	return 0;
+}
+#pragma endregion
+
