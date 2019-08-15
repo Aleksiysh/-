@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Array2D.cpp" />
+    <ClCompile Include="Distionary.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="RealNumber.cpp" />
@@ -124,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array2D.h" />
+    <ClInclude Include="Distionary.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="RealNumber.h" />
     <ClInclude Include="Strings.h" />
