@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AssemblerOutput>NoListing</AssemblerOutput>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -115,6 +116,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Algoritms.cpp" />
     <ClCompile Include="Array2D.cpp" />
     <ClCompile Include="Distionary.cpp" />
     <ClCompile Include="Functions.cpp" />
@@ -124,6 +126,7 @@
     <ClCompile Include="Vector_for.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algoritms.h" />
     <ClInclude Include="Array2D.h" />
     <ClInclude Include="Distionary.h" />
     <ClInclude Include="Functions.h" />

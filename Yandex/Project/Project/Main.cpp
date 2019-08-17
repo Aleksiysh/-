@@ -5,11 +5,12 @@
 #include "Functions.h"
 #include "Strings.h"
 #include "Distionary.h"
+#include "Algoritms.h"
 using namespace std;
 
 int main() {	
 
-	step11_8();
+	step12_5();
 	cout << endl;
 	system("pause");
 	return 0;

@@ -108,7 +108,6 @@ string join(vector<string> arr,string sep) {
 		str += sep + arr[i];
 	return str;
 }
-
 int step11_8()
 {
 	map<string, vector<string>> englishLatin, latinEnglish;
